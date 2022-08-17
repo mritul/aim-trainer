@@ -50,25 +50,19 @@ retryBtn.addEventListener("click", () => {
   location.reload();
 });
 
-dot.addEventListener("click", handleDotClick);
+window.addEventListener("click", (e) => {
+  // Checking if the clicked element is dot or outside of it
+  if (e.target == dot) {
+    handleDotClick();
+  } else {
+    if (started == true) {
+      endGame();
+    }
+  }
+});
 
 window.addEventListener("keypress", (e) => {
   if (e.key == "q") {
     endGame();
-  }
-});
-
-window.addEventListener("click", (e) => {
-  if (started) {
-    mousePosX = e.clientX;
-    mousePosY = e.clientY;
-    console.log(dotPosX, mousePosX);
-    console.log(dotPosY, mousePosY);
-    if (
-      Math.abs(mousePosX - dotPosX > 30) ||
-      Math.abs(mousePosY - dotPosY > 30)
-    ) {
-      endGame();
-    }
   }
 });
