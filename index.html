@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aim Trainer</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="modal start-modal">
+      <h1>Hit start to begin</h1>
+      <button class="btn start-btn">Start</button>
+    </div>
+    <div class="modal end-modal" open>
+      <h1 class="result">Your average response time</h1>
+      <p><span class="response-time">10.5</span> s</p>
+      <button class="btn retry-btn">Retry</button>
+    </div>
+    <main class="game-field">
+      <div class="dot"></div>
+    </main>
+    <!-- <canvas id="canvas"></canvas> -->
+    <script src="./app.js"></script>
+  </body>
+</html>

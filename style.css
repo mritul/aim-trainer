@@ -1,0 +1,81 @@
+* {
+  overflow-y: hidden;
+}
+
+body {
+  min-height: 100vh;
+  padding: 1rem;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 0.7rem;
+  border-radius: 10px;
+  z-index: 99;
+}
+
+.result {
+  text-align: center;
+}
+
+.modal p {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.response-time {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: tomato;
+  color: black;
+  border-width: 0;
+}
+
+.end-modal {
+  display: none;
+}
+
+.start-modal {
+  display: flex;
+  /* display: none; */
+}
+
+/* Game field */
+.game-field {
+  min-height: 100vh;
+  max-height: 100vh;
+  background-color: black;
+  position: relative;
+}
+
+.dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
