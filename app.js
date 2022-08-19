@@ -9,13 +9,13 @@ let lastClicked = 0;
 let avgResTime = 0;
 let num = 0;
 let denom = 0;
-let mousePosX = 0;
-let mousePosY = 0;
-let dotPosX = 0;
-let dotPosY = 0;
 let started = false;
 
 const beginGame = () => {
+  // After clicking start, they game ends as started is set to true immediately on the click and the click is considered to be outside the dot and the game ends so we set started to true after 1s after the start button is clicked
+  setTimeout(() => {
+    started = true;
+  }, 1000);
   startModal.style.display = "none";
   lastClicked = new Date().getTime();
 };
@@ -27,12 +27,6 @@ const endGame = () => {
 };
 
 const handleDotClick = (e) => {
-  started = true;
-  // Checking for loss first
-  dotPosX = dot.getBoundingClientRect().x;
-  dotPosY = dot.getBoundingClientRect().y;
-
-  // If user clicks the dot correctly
   const d = new Date();
   dot.style.top = `${Math.random() * (window.innerHeight - 80) + 40}px`;
   dot.style.left = `${Math.random() * (window.innerWidth - 120) + 20}px`;
